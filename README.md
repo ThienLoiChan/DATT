@@ -1,3 +1,14 @@
 # DATT
 Danh sách thành viên
-Lê Công Thiên
+(Admin)
+- Minh
+- Hoàng
+- Mới
+- Đỉnh
+
+  (User)
+  - Huy
+  - Đức
+  - Tính
+  - Trà
+  - Trí
