@@ -23,6 +23,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<link rel="stylesheet" href="./css/fontawesome-free-6.2.1-web/css/all.min.css">
+
 </head>
 
 <body>
@@ -132,25 +134,19 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Quanlythanhvien.html"
                                 aria-expanded="false">
-                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Quản Lý Thành Viên</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
-                                aria-expanded="false">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Profile</span>
-                            </a>
-                        </li>
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ListProduct.html"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">List Product</span>
+                                <span class="hide-menu">Quản Lý Sản Phẩm</span>
                             </a>
                         </li>
                       
@@ -158,10 +154,22 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ListCategory.html"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">List Category</span>
+                                <span class="hide-menu">Quản Lý Danh Mục</span>
                             </a>
                         </li>
-                        
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Quanlydonhang.html"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Quảng Lý Đơn Hàng</span>
+                            </a>
+                        </li><li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Statistical.html"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Thống Kê</span>
+                            </a>
+                        </li>
                         
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="map-google.html"
@@ -197,12 +205,7 @@
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <div class="page-breadcrumb bg-white">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Danh Sách</h4>
-                    </div>
-                    
-                </div>
+                
                 <!-- /.col-lg-12 -->
             </div>
             <!-- ============================================================== -->
@@ -245,36 +248,84 @@
                                             <td>1</td>
                                             <td>Quả</td>
                                             <td>****</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <a href="Editcategory.html">
+                                                    <button ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </a>
+                                                    <button onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
                                            
                                         </tr>
                                         <tr>
                                             <td>1</td>
                                             <td>Củ</td>
                                             <td>****</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <a href="Editcategory.html">
+                                                    <button ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </a>
+                                                    <button onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
                                            
                                         </tr>
                                         <tr>
                                             <td>1</td>
                                             <td>Bột</td>
                                             <td>****</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <a href="Editcategory.html">
+                                                    <button ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </a>
+                                                    <button onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
                                            
                                         </tr>
                                         <tr>
                                             <td>1</td>
                                             <td>Rau</td>
                                             <td>****</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <a href="Editcategory.html">
+                                                    <button ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </a>
+                                                    <button onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
                                            
                                         </tr>
                                         <tr>
                                             <td>1</td>
                                             <td>Nấm</td>
                                             <td>****</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <a href="Editcategory.html">
+                                                    <button ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </a>
+                                                    <button onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
                                            
                                         </tr>
                                         <tr>
                                             <td>1</td>
                                             <td>Nước</td>
                                             <td>****</td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs">
+                                                    <a href="Editcategory.html">
+                                                    <button ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </a>
+                                                    <button onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </div>
+                                            </td>
                                            
                                         </tr>
                                     </tbody>
@@ -283,6 +334,40 @@
                         </div>
                     </div>
                 </div>
+ 
+<!-- Modal xác nhận xoá -->
+<div class="modal confirmationModal" id="confirmationModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Bạn Có Muốn Xóa Đơn Hàng Này</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="btn btn-secondary">Hủy</button>
+                <button onclick="deleteOrder()" class="btn btn-danger">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function displayConfirmation() {
+        // Hiển thị modal xác nhận xoá khi nhấn nút "Xoá Thành Viên"
+        $('#confirmationModal').modal('show');
+    }
+
+    function closeModal() {
+        // Ẩn modal khi nhấn nút "Hủy" hoặc ngoài vùng modal
+        $('#confirmationModal').modal('hide');
+    }
+
+    function deleteOrder() {
+        // Thực hiện xử lý xoá đơn hàng ở đây
+        alert("Đơn hàng đã được xoá!"); // Hiển thị thông báo thành công
+        closeModal(); // Đóng modal sau khi xử lý xoá
+    }
+</script>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

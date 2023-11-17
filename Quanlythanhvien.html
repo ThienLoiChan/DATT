@@ -23,29 +23,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<style>
-    /* Ẩn modal khi trang được tải */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.4);
-    }
-    
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 50%;
-        text-align: center;
-    }
-</style>
+<link rel="stylesheet" href="./css/fontawesome-free-6.2.1-web/css/all.min.css">
+
 </head>
 
 <body>
@@ -125,7 +104,7 @@
                         <!-- ============================================================== -->
                         <li>
                             <a class="profile-pic" href="#">
-                                <img src="plugins/images/users/128.png" alt="user-img" width="36"
+                                <img src="./images/anh.jpg" alt="user-img" width="36"
                                     class="img-circle"><span class="text-white font-medium">ADMIN</span></a>
                         </li>
                         <!-- ============================================================== -->
@@ -155,25 +134,19 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Quanlythanhvien.html"
                                 aria-expanded="false">
-                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Quản Lý Thành Viên</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
-                                aria-expanded="false">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Profile</span>
-                            </a>
-                        </li>
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ListProduct.html"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">List Product</span>
+                                <span class="hide-menu">Quản Lý Sản Phẩm</span>
                             </a>
                         </li>
                       
@@ -181,10 +154,22 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ListCategory.html"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">List Category</span>
+                                <span class="hide-menu">Quản Lý Danh Mục</span>
                             </a>
                         </li>
-                        
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Quanlydonhang.html"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Quảng Lý Đơn Hàng</span>
+                            </a>
+                        </li><li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Statistical.html"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Thống Kê</span>
+                            </a>
+                        </li>
                         
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="map-google.html"
@@ -244,7 +229,7 @@
                             <h3 class="box-title">Danh Sách Thành Viên</h3>
                             <div class="form-group mb-4">
                                 <div class="col-sm-12">
-                                    <a href="AddProduct.html">
+                                    <a href="AddAccount.html">
                                         <button  class="btn btn-danger">Thêm Thành Viên</button>
                                     </a>
                                     
@@ -254,162 +239,151 @@
                             </div>
                             
                             <div class="table-responsive">
-                                <table class="table text-nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0">#</th>
-                                            <th class="border-top-0">Họ Và Tên </th>
-                                            <th class="border-top-0">Email</th>
-                                            <th class="border-top-0">Số Điện Thoại</th>
-                                            <th class="border-top-0">Địa Chỉ</th>
-                                            <th class="border-top-0">Mã Quyền</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Võ Hoàng Minh</td>
-                                            <td>vhm2511@gmail.com</td>
-                                            <td>888.888.888 </td>
-                                            <td>Đà Nẵng</td>
-                                            <td>Admin</td>
-                                            <td>
-                                                <a href="profile.html">
-                                                    <button  class="btn btn-danger">Edit</button>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="delete.html">
-                                                    <button class="delete-btn">Delete</button>
-                                                </a>
-
-                                            </td>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Võ Hoàng Minh</td>
-                                            <td>vhm2511@gmail.com</td>
-                                            <td>888.888.888 </td>
-                                            <td>Đà Nẵng</td>
-                                            <td>Admin</td>
-                                            <td>
-                                                <a href="profile.html">
-                                                    <button  class="btn btn-danger">Edit</button>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="delete.html">
-                                                    <button class="delete-btn">Delete</button>
-                                                </a>
-
-                                            </td>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Võ Hoàng Minh</td>
-                                            <td>vhm2511@gmail.com</td>
-                                            <td>888.888.888 </td>
-                                            <td>Đà Nẵng</td>
-                                            <td>Admin</td>
-                                            <td>
-                                                <a href="profile.html">
-                                                    <button  class="btn btn-danger">Edit</button>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="delete.html">
-                                                    <button class="delete-btn">Delete</button>
-                                                </a>
-
-                                            </td>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Võ Hoàng Minh</td>
-                                            <td>vhm2511@gmail.com</td>
-                                            <td>888.888.888 </td>
-                                            <td>Đà Nẵng</td>
-                                            <td>Admin</td>
-                                            <td>
-                                                <a href="profile.html">
-                                                    <button  class="btn btn-danger">Edit</button>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="delete.html">
-                                                    <button class="delete-btn">Delete</button>
-                                                </a>
-
-                                            </td>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Võ Hoàng Minh</td>
-                                            <td>vhm2511@gmail.com</td>
-                                            <td>888.888.888 </td>
-                                            <td>Đà Nẵng</td>
-                                            <td>Admin</td>
-                                            <td>
-                                                <a href="profile.html">
-                                                    <button  class="btn btn-danger">Edit</button>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="delete.html">
-                                                    <button class="delete-btn">Delete</button>
-                                                </a>
-
-                                            </td>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Võ Hoàng Minh</td>
-                                            <td>vhm2511@gmail.com</td>
-                                            <td>888.888.888 </td>
-                                            <td>Đà Nẵng</td>
-                                            <td>Admin</td>
-                                            <td>
-                                                <a href="profile.html">
-                                                    <button  class="btn btn-danger">Edit</button>
-                                                </a>
-                                            </td>
-                                            <td>
+                                <div class="card">
+                                    <div class="card-header" style="font-weight: 600; font-size: large; background-color: rgb(225, 65, 94); color: white;">
+                                        Danh Sách Thành Viên</div>
+                                    <table class="table table-condensed container">
+                                        <thead class="bg-success" style="font-variant: small-caps;">
+                                            <tr>
+                                                <th>Email</th>
+                                                <th>Mật khẩu</th>
+                                                <th>Tên Nhân viên</th>
+                                                <th>Số điện thoại</th>
+                                                <th>địa chỉ</th>
+                                                <th>Image</th>
+                            
+                                                <!-- <th>Available?</th>  -->
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>hoang@gmail.com</td>
+                                                <td>123321</td>
+                                                <td>Phan Ngọc Hoang</td>
+                                                <td>0123456789</td>
+                                                <td>137 Nguyễn Thị Thập</td>
                                                 
-                                                    <button onclick="displayConfirmation()">Delete</button>
-                                               
+                                                <td><img src="./images/nhanvien.png" width="50px" alt="..."/></td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="profile.html">
+                                                        <button  ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                    </a>
+                                                        <button  onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>VoHoangMinh@gmail.com</td>
+                                                <td>123456</td>
+                                                <td>Võ Hoàng Minh</td>
+                                                <td>8888888888</td>
+                                                <td>999 Đà Nẵng</td>
+                                                
+                                                <td><img src="./images/128.png" width="50px" alt="..."/></td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="profile.html">
+                                                            <button  ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                        </a>
+                                                        <button  onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>VoHoangMinh@gmail.com</td>
+                                                <td>123456</td>
+                                                <td>Võ Hoàng Minh</td>
+                                                <td>8888888888</td>
+                                                <td>999 Đà Nẵng</td>
+                                                
+                                                <td><img src="./images/128.png" width="50px" alt="..."/></td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="profile.html">
+                                                            <button  ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                        </a>
+                                                        <button  onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>dinh@gmail.com</td>
+                                                <td>123456</td>
+                                                <td>Dinh Tien Dinh</td>
+                                                <td>666666666</td>
+                                                <td>999 Hà Lội</td>
+                                                
+                                                <td><img src="/ample-admin-lite-master (2)/ample-admin-lite-master/images/anh.jpg" width="50px" alt="..."/></td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="profile.html">
+                                                            <button  ng-click="edit(item)" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                        </a>
+                                                        <button  onclick="displayConfirmation()"  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+                                       
 
-                                            </td>
-                                           
-
-    <!-- Modal xác nhận xoá -->
-    <div id="confirmationModal" class="modal">
+<!-- Modal xác nhận xoá -->
+<div class="modal confirmationModal" id="confirmationModal">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <p>Bạn có chắc chắn muốn xoá thành viên này?</p>
-            <button onclick="deleteMember()">Xác Nhận Xoá</button>
-            <button onclick="closeModal()">Hủy</button>
+            <div class="modal-header">
+                <h5 class="modal-title">Bạn Có Muốn Xóa Đơn Hàng Này</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="btn btn-secondary">Hủy</button>
+                <button onclick="deleteOrder()" class="btn btn-danger">Xóa</button>
+            </div>
         </div>
     </div>
+</div>
 
-    <script>
-        function displayConfirmation() {
-            // Hiển thị modal xác nhận xoá khi nhấn nút "Xoá Thành Viên"
-            document.getElementById('confirmationModal').style.display = 'block';
-        }
+<script>
+    function displayConfirmation() {
+        // Hiển thị modal xác nhận xoá khi nhấn nút "Xoá Thành Viên"
+        $('#confirmationModal').modal('show');
+    }
 
-        function closeModal() {
-            // Ẩn modal khi nhấn nút "Hủy" hoặc ngoài vùng modal
-            document.getElementById('confirmationModal').style.display = 'none';
-        }
+    function closeModal() {
+        // Ẩn modal khi nhấn nút "Hủy" hoặc ngoài vùng modal
+        $('#confirmationModal').modal('hide');
+    }
 
-        function deleteMember() {
-            // Thực hiện xử lý xoá thành viên ở đây
-            alert("Thành viên đã được xoá!"); // Hiển thị thông báo thành công
-            closeModal(); // Đóng modal sau khi xử lý xoá
-        }
-    </script>
+    function deleteOrder() {
+        // Thực hiện xử lý xoá đơn hàng ở đây
+        alert("Đơn hàng đã được xoá!"); // Hiển thị thông báo thành công
+        closeModal(); // Đóng modal sau khi xử lý xoá
+    }
+</script>
+                                            
+                            
+                                        </tbody>
                                         
-                                            
-                                            
-                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    </table>
+                                    <div class="card-footer text-center">
+                                        <button  class="btn btn-danger">
+                                            <i class="fa-solid fa-backward-fast"></i>
+                                        </button>
+                                        <button  class="btn btn-primary">
+                                            <i class="fa-solid fa-forward-step fa-rotate-180"></i>
+                                        </button>
+                                        <button class="btn btn-default"></button>
+                                        <button  class="btn btn-success">
+                                            <i class="fa-solid fa-forward-step"></i>
+                                        </button>
+                                        <button  class="btn btn-info">
+                                            <i class="fa-solid fa-forward-fast"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            
                             </div>
                         </div>
                     </div>
