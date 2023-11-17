@@ -11,15 +11,41 @@
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>FruitFarm Admin</title>
+    <title>Ample Admin Lite Template by WrapPixel</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <!-- Custom CSS -->
-    <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
-    <!-- Custom CSS -->
-    <link href="css/style.min.css" rel="stylesheet">
+   <link href="css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+    /* Ẩn modal khi trang được tải */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
@@ -72,7 +98,12 @@
                 <!-- End Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                   
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                                href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
@@ -153,13 +184,6 @@
                                 <span class="hide-menu">List Category</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Quanlydonhang.html"
-                                aria-expanded="false">
-                                <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Quản Lý Đơn Hàng</span>
-                            </a>
-                        </li>
                         
                         
                         <li class="sidebar-item">
@@ -196,12 +220,7 @@
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <div class="page-breadcrumb bg-white">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
-                    </div>
-                    
-                </div>
+                
                 <!-- /.col-lg-12 -->
             </div>
             <!-- ============================================================== -->
@@ -212,126 +231,192 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
-                <!-- Three charts -->
-                <!-- ============================================================== -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Tổng lượt truy cập</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <div id="sparklinedash"><canvas width="67" height="30"
-                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
-                                    </div>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-success">999</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Lượt truy cập page</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <div id="sparklinedash2"><canvas width="67" height="30"
-                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
-                                    </div>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-purple">666</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Khách vừa truy cập</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <div id="sparklinedash3"><canvas width="67" height="30"
-                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
-                                    </div>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-info">333</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- PRODUCTS YEARLY SALES -->
-                <!-- ============================================================== -->
-               
-                <!-- ============================================================== -->
-                <!-- RECENT SALES -->
+                <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="col-sm-12">
                         <div class="white-box">
-                            <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Better Seller</h3>
-                                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
-                                   
-                                </div>
+                            <h3 class="box-title">Danh Sách Sản Phẩm</h3>
+                            <div class="form-group mb-4">
+                                
+                                
+                                
                             </div>
+                            
                             <div class="table-responsive">
-                                <table class="table no-wrap">
+                                <table class="table text-nowrap">
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">#</th>
-                                            <th class="border-top-0">Tên Sản Phẩm</th>
-                                            <th class="border-top-0">Loại Sản Phẩm</th>
-                                            <th class="border-top-0">Ngày</th>
-                                            <th class="border-top-0">Giá</th>
+                                            <th class="border-top-0">Mã Đơn Hàng</th>
+                                            <th class="border-top-0">Địa Chỉ</th>
+                                            <th class="border-top-0">Tên Người Nhận</th>
+                                            <th class="border-top-0">Số Điện Thoại</th>
+                                            <th class="border-top-0">Tổng tiền</th>
+                                            <th class="border-top-0">Ghi chú</th>
+                                            <th class="border-top-0">Ngày Đặt </th>
+                                            <th class="border-top-0">Trạng Thái</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
-                                        </tr>
+                                            <td>AB01</td>
+                                            <td>Liên Chiểu, TP Đà Nẵng</td>
+                                            <td>Đinh Tiên Đỉnh </td>
+                                            <td>0888.888.888</td>
+                                            <td>210.000VND</td>
+                                            <td>Che Tên</td>
+                                            <td>25/11/2023</td>
+                                            <td>Chưa giao</td>
+                                            <td>
+                                                <a href="editdonhang.html">
+                                                    <button  class="btn btn-danger">Edit</button>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                <button onclick="displayConfirmation()">Delete</button>
+                                           
+
+                                        </td>
                                         <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
-                                        </tr>
+                                            <td>1</td>
+                                            <td>AB01</td>
+                                            <td>Liên Chiểu, TP Đà Nẵng</td>
+                                            <td>Đinh Tiên Đỉnh </td>
+                                            <td>0888.888.888</td>
+                                            <td>210.000VND</td>
+                                            <td>Che Tên</td>
+                                            <td>25/11/2023</td>
+                                            <td>Chưa giao</td>
+                                            <td>
+                                                <a href="editdonhang.html">
+                                                    <button  class="btn btn-danger">Edit</button>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                <button onclick="displayConfirmation()">Delete</button>
+                                           
+
+                                        </td>
                                         <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
-                                        </tr>
+                                            <td>1</td>
+                                            <td>AB01</td>
+                                            <td>Liên Chiểu, TP Đà Nẵng</td>
+                                            <td>Đinh Tiên Đỉnh </td>
+                                            <td>0888.888.888</td>
+                                            <td>210.000VND</td>
+                                            <td>Che Tên</td>
+                                            <td>25/11/2023</td>
+                                            <td>Chưa giao</td>
+                                            <td>
+                                                <a href="editdonhang.html">
+                                                    <button  class="btn btn-danger">Edit</button>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                <button onclick="displayConfirmation()">Delete</button>
+                                           
+
+                                        </td>
                                         <tr>
-                                            <td>4</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
-                                        </tr>
+                                            <td>1</td>
+                                            <td>AB01</td>
+                                            <td>Liên Chiểu, TP Đà Nẵng</td>
+                                            <td>Đinh Tiên Đỉnh </td>
+                                            <td>0888.888.888</td>
+                                            <td>210.000VND</td>
+                                            <td>Che Tên</td>
+                                            <td>25/11/2023</td>
+                                            <td>Chưa giao</td>
+                                            <td>
+                                                <a href="editdonhang.html">
+                                                    <button  class="btn btn-danger">Edit</button>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                <button onclick="displayConfirmation()">Delete</button>
+                                           
+
+                                        </td>
                                         <tr>
-                                            <td>5</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
-                                        </tr>
+                                            <td>1</td>
+                                            <td>AB01</td>
+                                            <td>Liên Chiểu, TP Đà Nẵng</td>
+                                            <td>Đinh Tiên Đỉnh </td>
+                                            <td>0888.888.888</td>
+                                            <td>210.000VND</td>
+                                            <td>Che Tên</td>
+                                            <td>25/11/2023</td>
+                                            <td>Chưa giao</td>
+                                            <td>
+                                                <a href="editdonhang.html">
+                                                    <button  class="btn btn-danger">Edit</button>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                <button onclick="displayConfirmation()">Delete</button>
+                                           
+
+                                        </td>
                                         <tr>
-                                            <td>6</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td class="txt-oflo">Dưa Lưới Nhật</td>
-                                            <td>Quả</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">140.000VND</span></td>
+                                            <td>1</td>
+                                            <td>AB01</td>
+                                            <td>Liên Chiểu, TP Đà Nẵng</td>
+                                            <td>Đinh Tiên Đỉnh </td>
+                                            <td>0888.888.888</td>
+                                            <td>210.000VND</td>
+                                            <td>Che Tên</td>
+                                            <td>25/11/2023</td>
+                                            <td>Chưa giao</td>
+                                            <td>
+                                                <a href="editdonhang.html">
+                                                    <button  class="btn btn-danger">Edit</button>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                <button onclick="displayConfirmation()">Delete</button>
+                                           
+
+                                        </td>
+                                       
+
+<!-- Modal xác nhận xoá -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <p>Bạn có chắc chắn muốn xoá đơn hàng này?</p>
+        <button onclick="deleteMember()">Xác Nhận Xoá</button>
+        <button onclick="closeModal()">Hủy</button>
+    </div>
+</div>
+
+<script>
+    function displayConfirmation() {
+        // Hiển thị modal xác nhận xoá khi nhấn nút "Xoá ĐƠn Hàng"
+        document.getElementById('confirmationModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        // Ẩn modal khi nhấn nút "Hủy" hoặc ngoài vùng modal
+        document.getElementById('confirmationModal').style.display = 'none';
+    }
+
+    function deleteMember() {
+        // Thực hiện xử lý xoá Đơn Hàng ở đây
+        alert("Đơn Hàng đã được xoá!"); // Hiển thị thông báo thành công
+        closeModal(); // Đóng modal sau khi xử lý xoá
+    }
+</script>
+                                        
+                                        
+                                      
                                         </tr>
                                     </tbody>
                                 </table>
@@ -339,20 +424,17 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- ============================================================== -->
-                <!-- Recent Comments -->
+                <!-- End PAge Content -->
                 <!-- ============================================================== -->
-                <div class="row">
-                   
-                                <!-- Comment Row -->
-                              
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                </div>
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
@@ -360,8 +442,8 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2023 © FruitFarm Admin brought to you by <a
-                    href="https://www.bachhoaxanh.com/">FruitFarm.com</a>
+            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
+                    href="https://www.wrappixel.com/">wrappixel.com</a>
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -381,18 +463,12 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app-style-switcher.js"></script>
-    <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="js/pages/dashboards/dashboard1.js"></script>
 </body>
 
 </html>

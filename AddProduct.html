@@ -191,9 +191,7 @@
             <!-- ============================================================== -->
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Add Product </h4>
-                    </div>
+                   
                     
                 </div>
                 <!-- /.col-lg-12 -->
@@ -204,70 +202,79 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <div class="col-lg-8 col-xlg-9 col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <form class="form-horizontal form-material">
-                                <div class="form-group mb-4">
-                                    <label class="col-md-12 p-0">Tên Sản Phẩm</label>
-                                    <div class="col-md-12 border-bottom p-0">
-                                        <input type="text" placeholder="Nhập tên sản phẩm"
-                                            class="form-control p-0 border-0"> </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="col-md-12 p-0">Loại Sản Phẩm</label>
-                                    <div class="col-md-12 border-bottom p-0">
-                                        <input type="text" placeholder="Nhập loại sản phẩm"
-                                            class="form-control p-0 border-0"> </div>
-                                </div>
-                                
-                                <div class="form-group mb-4">
-                                    <label class="col-md-12 p-0">Giá Sản Phẩm</label>
-                                    <div class="col-md-12 border-bottom p-0">
-                                        <input type="text" placeholder="Nhập giá sản phẩm"
-                                            class="form-control p-0 border-0"> </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="col-md-12 p-0">Số Lượng Sản Phẩm</label>
-                                    <div class="col-md-12 border-bottom p-0">
-                                        <input type="text" placeholder="Kg"
-                                            class="form-control p-0 border-0">
+            <div class="container">
+                <!-- tble -->
+            
+                <div class="card">
+                    <div class="card-header" style="font-weight: 600; font-size: large; background-color: rgb(225, 65, 94); color: white;">
+                        Thêm Sản Phẩm</div>
+                    <div class="card-boby">
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <label for="image" class="mt-4">
+                                    <img 
+                                    src="../images/no-image.png" alt="" style="max-width: 100%; max-height: 50%;margin-left: 5%;" class="img-fluid">
+                                    
+                                </label>
+                            </div>
+                            <div class="col-sm-8 mt-3">
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <div style="font-weight: 500;">Tên SP</div>
+                                        <input ng-model="form.name" class="form-control" style="width: 95%;">
+                                    </div>
+                                    
+                                    <div class="form-group col-sm-6">
+                                        <div style="font-weight: 500;">Category</div>
+                                        <select  ng-model="form.category.id" class="form-control" style="width: 95%;">
+                                            <option ng-repeat="c in cates" ng-value="c.id">{{c.name}}</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="form-group mb-4">
-                                    <label class="col-md-12 p-0">Chú thích</label>
-                                    <div class="col-md-12 border-bottom p-0">
-                                        
-                                        <textarea rows="5" class="form-control p-0 border-0"></textarea>
-                                        <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="nhập chú thích nếu có"
-                                                class="form-control p-0 border-0">
-                                        </div>
-                                        
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <div style="font-weight: 500;">Image</div>
+                                        <input type="file" class="form-control" id="poster" style="width: 95%;"
+                                        onchange="angular.element(this).scope().imageChanged(this.files)">
                                     </div>
-                                 <div>
-                                    <label for="productImage">Product Image:</label>
-                                    <div>
-                                     <input type="file" id="productImage" name="productImage" accept="image/*">
-                                      </div>
-                                     </div>
-                                                
-                                </div>
-                                
-                                
-                                <div class="form-group mb-4">
-                                    <div class="col-sm-12">
-                                        <button class="btn btn-success">Add</button>
+                                    <div class="form-group col-sm-6">
+                                        <div style="font-weight: 500;">Đơn giá</div>
+                                        <input ng-model="form.age" class="form-control" style="width: 95%;">
                                     </div>
                                 </div>
-                            </form>
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <div style="font-weight: 500;">Giảm giá</div>
+                                        <input ng-model="form.age" class="form-control" style="width: 95%;">
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <div style="font-weight: 500;">Trạng thái</div>
+                                        <input ng-model="form.age" class="form-control" style="width: 95%;">
+                                    </div>
+                                </div>
+            
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <div style="font-weight: 500;">Mô tả</div>
+                                        <textarea ng-model="form.movieContent" class="form-control" style="width: 98%;" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
+                    <div class="card-footer text-center">
+                        
+                        <button ng-click="update()" class="btn btn-success">
+                            <i class="fa fa-stack-overflow" aria-hidden="true"></i> Save
+                        </button>
+                        
+                        <button ng-click="reset()" class="btn btn-info">
+                            <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                        </button>
+                    </div>
                 </div>
+            </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
