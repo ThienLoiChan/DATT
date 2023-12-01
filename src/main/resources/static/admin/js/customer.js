@@ -26,7 +26,17 @@ app.controller("OrderCtrl", function ($scope, $http) {
     };
     $scope.load_all();
     $scope.detail = (id) => {
-        // location.replace("./orderdetail.html?idHoaDon=" + id);
+        location.replace("/admin/customer/detail?idKhachhang=" + id);
+    }
+    $scope.deleteDanhMuc = (id) => {
+        const idKhachHang = id;
+        const urlXoa = `${host}/khachhang/${idKhachHang}`;
+        $http.delete(urlXoa).then(resp => {
+            alert("Xóa thành công!");
+            location.replace("/admin/customer")
+        }).catch((resp)=>{
+            alert("Không thể xoá do tồn tại sản phẩm có danh mục này!");
+        });
     }
 });
 app.filter('range', function () {

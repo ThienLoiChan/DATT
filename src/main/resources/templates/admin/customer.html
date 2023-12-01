@@ -152,9 +152,9 @@
                                     <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Địa chỉ</th>
-                                    <th
+                                    <!-- <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Tên quyền</th>
+                                        Tên quyền</th> -->
                                     <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Thao tác</th>
@@ -177,12 +177,13 @@
                                     <td class="align-middle text-center"><span
                                             class="text-secondary text-xs font-weight-bold">{{item.diaChi}}</span>
                                     </td>
-                                    <td class="align-middle text-center"><span
+                                    <!-- <td class="align-middle text-center"><span
                                             class="text-secondary text-xs font-weight-bold">{{item.quyen.tenQuyen}}</span>
-                                    </td>
-                                    <td class="align-middle text-center"><a ng-click="detail(item.taiKhoan)"
-                                                                            class="text-secondary font-weight-bold text-xs"> Chi
-                                        tiết </a> <a class="text-secondary font-weight-bold text-xs"
+                                    </td> -->
+                                    <td class="align-middle text-center">
+                                        <a ng-click="detail(item.taiKhoan)"
+                                        class="text-secondary font-weight-bold text-xs"> Chi tiết </a> 
+                                        <a class="text-secondary font-weight-bold text-xs" ng-click="deleteDanhMuc(item.taiKhoan)"
                                                      style="margin-left: 10px;"> Xóa </a></td>
 
                                 </tr>
